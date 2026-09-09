@@ -1,7 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="배상훈의 개인 홈페이지">
+  <title>배상훈 | 즐거움을 찾는 사람</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+    :root { --ink:#1a2540; --paper:#f7f3ea; --accent:#ff5c45; --lemon:#ffd84d; --sky:#9ed7e5; --line:#1a2540; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:'Noto Sans KR',sans-serif; line-height:1.65; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; padding:22px 0; font-family:'DM Mono',monospace; font-size:.78rem; letter-spacing:.04em; }
+    .topbar a { color:inherit; text-decoration:none; } .status { display:flex; align-items:center; gap:8px; }
+    .status i { width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; }
+    .hero { min-height:520px; padding:52px 0 80px; display:grid; grid-template-columns:1.35fr .65fr; align-items:end; gap:36px; border-bottom:3px solid var(--line); }
+    .eyebrow { margin:0 0 14px; font-family:'DM Mono',monospace; font-size:.82rem; letter-spacing:.08em; color:var(--accent); }
+    h1 { margin:0; font-size:clamp(4rem,11vw,8.8rem); line-height:.95; letter-spacing:-.08em; font-weight:800; }
+    .intro { max-width:540px; margin:28px 0 0; font-size:clamp(1.1rem,2vw,1.45rem); word-break:keep-all; }
+    .hero-note { padding:26px; background:var(--lemon); border:3px solid var(--line); box-shadow:9px 9px 0 var(--ink); transform:rotate(2deg); }
+    .hero-note small,.label { display:block; margin-bottom:10px; font:500 .72rem 'DM Mono',monospace; letter-spacing:.08em; }
+    .hero-note p { margin:0; font-weight:700; font-size:1.25rem; word-break:keep-all; }
+    section { padding:88px 0; border-bottom:3px solid var(--line); }
+    .section-title { display:flex; align-items:baseline; gap:16px; margin:0 0 34px; font-size:clamp(2.2rem,5vw,4.2rem); letter-spacing:-.06em; line-height:1; }
+    .section-title span { font:400 .78rem 'DM Mono',monospace; letter-spacing:.05em; }
+    .profile { display:grid; grid-template-columns:1fr 1fr; border:3px solid var(--line); }
+    .profile-item { min-height:176px; padding:27px; border-right:3px solid var(--line); }
+    .profile-item:nth-child(even) { border-right:0; } .profile-item:nth-child(n+3) { border-top:3px solid var(--line); }
+    .profile-item strong { font-size:1.35rem; display:block; word-break:keep-all; } .profile-item p { margin:7px 0 0; font-size:.94rem; }
+    .profile-item:nth-child(1) { background:var(--sky); } .profile-item:nth-child(4) { background:var(--accent); color:white; }
+    .interests { background:var(--ink); color:var(--paper); } .interests .section-title { color:var(--lemon); }
+    .chips { display:flex; flex-wrap:wrap; gap:12px; }
+    .chip { display:inline-block; padding:11px 18px; border:2px solid var(--paper); border-radius:999px; font-size:1.05rem; transition:transform .2s ease,background .2s ease,color .2s ease; }
+    .chip:hover { background:var(--lemon); color:var(--ink); border-color:var(--lemon); transform:translateY(-4px) rotate(-2deg); }
+    .closing { padding:100px 0; text-align:center; } .closing p { margin:0; font:400 clamp(1rem,2vw,1.35rem) 'DM Mono',monospace; }
+    .closing h2 { margin:16px 0 0; font-size:clamp(2.6rem,7vw,5.8rem); letter-spacing:-.08em; line-height:1; }
+    footer { padding:24px 0 42px; display:flex; justify-content:space-between; font:.72rem 'DM Mono',monospace; }
+    @media (max-width:680px) { .wrap { width:min(100% - 32px,1120px); } .hero { min-height:auto; grid-template-columns:1fr; padding:40px 0 62px; } .hero-note { max-width:300px; justify-self:end; } section { padding:64px 0; } .profile { grid-template-columns:1fr; } .profile-item,.profile-item:nth-child(even) { border-right:0; } .profile-item:not(:first-child) { border-top:3px solid var(--line); } footer { gap:16px; flex-direction:column; } }
+  </style>
+</head>
 <body>
-  <h1>안녕하세요, 제 홈페이지입니다</h1>
-  <p>GitHub Pages로 만들었습니다!</p>
+  <header class="wrap topbar"><a href="#top">BAE SANGHOON</a><span class="status"><i></i> FINDING JOY</span></header>
+  <main id="top">
+    <div class="wrap hero">
+      <div><p class="eyebrow">HELLO, I'M</p><h1>배상훈</h1><p class="intro">호기심이 닿는 곳으로 움직이며,<br>일상 속 즐거움을 꾸준히 발견하는 사람입니다.</p></div>
+      <aside class="hero-note"><small>MY MOTTO</small><p>“하루하루는 성실하게,<br>인생 전체는 되는 대로.”</p></aside>
+    </div>
+    <section class="wrap" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About <span>01 / WHO I AM</span></h2>
+      <div class="profile">
+        <article class="profile-item"><span class="label">INTRODUCTION</span><strong>즐거움 추구 인간</strong><p>재미있는 일, 새로운 경험, 좋은 사람을 좋아합니다.</p></article>
+        <article class="profile-item"><span class="label">SCHOOL</span><strong>서울대학교<br>첨단융합학부</strong><p>2026학번</p></article>
+        <article class="profile-item"><span class="label">CURRENTLY</span><strong>보고, 듣고,<br>만드는 중</strong><p>좋아하는 것들을 제 방식으로 연결해 보고 있어요.</p></article>
+        <article class="profile-item"><span class="label">PHILOSOPHY</span><strong>성실한 오늘,<br>가벼운 내일</strong><p>오늘 할 일에는 진심을, 큰 그림에는 여유를 둡니다.</p></article>
+      </div>
+    </section>
+    <section class="interests" aria-labelledby="interest-title"><div class="wrap"><h2 class="section-title" id="interest-title">Interest <span>02 / THINGS I LIKE</span></h2><div class="chips" aria-label="관심사 목록"><span class="chip">의류</span><span class="chip">음악</span><span class="chip">밴드</span><span class="chip">영화</span><span class="chip">영상</span><span class="chip">수학</span><span class="chip">데이터과학</span><span class="chip">반도체</span><span class="chip">그리고 새로운 것</span></div></div></section>
+    <section class="wrap closing"><p>LET'S KEEP IT INTERESTING.</p><h2>오늘도 즐겁게.</h2></section>
+  </main>
+  <footer class="wrap"><span>© 2026 BAE SANGHOON</span><span>SEOUL, KOREA</span></footer>
 </body>
 </html>
